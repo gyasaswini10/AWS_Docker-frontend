@@ -1,5 +1,5 @@
 // CallApi
-export const BASEURL= "http://localhost:8083/";
+export const BASEURL= "http://54.175.206.192:8083/";
 export function callApi(reqmethod, url, data, responseHandler){
   var option;
   if(reqmethod === "GET" || reqmethod === "DELETE")
