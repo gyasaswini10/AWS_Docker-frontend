@@ -24,7 +24,7 @@ const PropertyManager = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://54.175.206.192:8083/api/properties", property);
+      await axios.post("http://3.82.105.168:8083/api/properties", property);
       alert("Property added successfully!");
     } catch (error) {
       console.error("Error adding property:", error);
