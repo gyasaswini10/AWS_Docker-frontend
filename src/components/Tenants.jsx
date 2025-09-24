@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./../css/Rentals.css"; // Import the CSS file
 import Footer from "./Footer";
-
+import { BASEURL } from "./Api.js"; 
 const Rentals = () => {
   const [properties, setProperties] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://44.208.166.46:8083/api/properties")
+      .get(`${BASEURL}api/properties`)
       .then((response) => {
         setProperties(response.data);
       })

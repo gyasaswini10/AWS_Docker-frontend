@@ -131,7 +131,7 @@ export class Home1 extends Component {
 
     callApi(
       "POST",
-      "http://44.208.166.46:8083/users/signup",
+     `${BASEURL}users/signup`,
       data,
       this.getResponse
     );
@@ -156,8 +156,9 @@ export class Home1 extends Component {
       return;
     }
 
-    let url = "http://44.208.166.46:8083/users/forgotpassword/" + username.value;
-    callApi("GET", url, "", this.forgotPasswordResponse);
+let url = `${BASEURL}users/forgotpassword/${username.value}`;
+callApi("GET", url, "", this.forgotPasswordResponse);
+
   }
 
   forgotPasswordResponse(res) {
@@ -203,7 +204,7 @@ export class Home1 extends Component {
 
     callApi(
       "POST",
-      "http://44.208.166.46:8083/users/signin",
+      `${BASEURL}users/signin`,
       data,
       this.signinResponse.bind(this)
     );
