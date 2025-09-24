@@ -131,7 +131,7 @@ export class Home1 extends Component {
 
     callApi(
       "POST",
-      "http://54.175.206.192:8083/users/signup",
+      "http://3.82.105.168:8083/users/signup",
       data,
       this.getResponse
     );
@@ -156,7 +156,7 @@ export class Home1 extends Component {
       return;
     }
 
-    let url = "http://54.175.206.192:8083/users/forgotpassword/" + username.value;
+    let url = "http://3.82.105.168:8083/users/forgotpassword/" + username.value;
     callApi("GET", url, "", this.forgotPasswordResponse);
   }
 
@@ -203,7 +203,7 @@ export class Home1 extends Component {
 
     callApi(
       "POST",
-      "http://54.175.206.192:8083/users/signin",
+      "http://3.82.105.168:8083/users/signin",
       data,
       this.signinResponse.bind(this)
     );
