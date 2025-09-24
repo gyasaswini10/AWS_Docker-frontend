@@ -8,7 +8,7 @@ const Rentals = () => {
 
   useEffect(() => {
     axios
-      .get("http://3.82.105.168:8083/api/properties")
+      .get("http://44.208.166.46:8083/api/properties")
       .then((response) => {
         setProperties(response.data);
       })
